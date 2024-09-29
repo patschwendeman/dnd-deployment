@@ -23,7 +23,7 @@ services:
       - "5173:5173"
 
   backend:
-    image: ghcr.io/patschwendeman/python-app:5ca4058f6f93c7dee2e6529b987d0c57976824ea
+    image: ghcr.io/patschwendeman/python-app:latest
     platform: linux/arm64
     environment:
       - DRIVERNAME=${DRIVERNAME}
