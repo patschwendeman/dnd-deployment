@@ -1,10 +1,12 @@
 version: '3'
 services:
-  api:
-    image: ghcr.io/patschwendeman/python-app:47774b44dff8984621319a1c9f3f03143e9a92b6
-    ports:
-      - "8000:8000"
-  ui:
-    image: ghcr.io/patschwendeman/react-app:3a3e1d18bc017fa18ae9a0dd7f712f7421927646
+  dnd-frontend:
+    image: ghcr.io/patschwendeman/react-app:latest
+    platform: linux/arm64
     ports:
       - "5173:5173"
+  dnd-backend:
+    image: ghcr.io/patschwendeman/python-app:latest
+    platform: linux/arm64
+    ports:
+      - "8000:8000"
